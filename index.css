@@ -8,10 +8,10 @@
     font-family: "Inter",sans-serif;
 }
 :root{
-    --color-primario: #2f1c6a;
-    --color-secundario: #673de6;
-    --color-terciario: #bfc6ff3d;
-    --color-cuarto: #bac0f1;
+    --azul-oscuro: #2f1c6a;
+    --azul-claro: #673de6;
+    --gris: #bfc6ff3d;
+    --gris-claro: #bac0f1;
 }
 .section{
     display: flex;
@@ -20,13 +20,13 @@
 }
 .titulo{
     font-size: 35px;
-    color: var(--color-primario);
+    color: var(--azul-oscuro);
     display: flex;
     justify-content: center;
     padding: 50px;
 }
 .card{
-    border: 1px solid var(--color-cuarto);
+    border: 1px solid var(--gris-claro);
     border-radius: 7px;
     width: 360px;
     height: 450px;
@@ -36,28 +36,34 @@
 .card .texto-contenedor{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
     width: 100%;
     height: 100%;
     padding: 48px 32px;
 }
 .card .texto-contenedor .estrellas{
-    color: var(--color-secundario);
+    color: var(--azul-claro);
     font-size: 20px;
     display: flex;
     gap: 7px;
 }
 .card .texto-contenedor .texto{
-    color: var(--color-primario);
-    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    color: var(--azul-oscuro);
+    font-size: 15px;  
 }
 .card .texto-contenedor .link{
-    color: var(--color-secundario);
+    color: var(--azul-claro);
     text-decoration: none;
     font-weight: 700;
 }
 .card .nombre-contenedor{
-    border-top: 1px solid var(--color-cuarto);
+    border-top: 1px solid var(--gris-claro);
     width: 100%;
     height: 113px;
     display: flex;
@@ -65,8 +71,8 @@
     align-items: center;
     gap: 10px;
     padding: 48px 32px;
-    background-color: var(--color-terciario);
-    color: var(--color-primario);
+    background-color: var(--gris);
+    color: var(--azul-oscuro);
 }
 .card .nombre-contenedor .foto{
     width: 64px;
@@ -89,8 +95,8 @@
 }
 .boton-contenedor .boton{
     font-weight: 700;
-    border: 2px solid var(--color-secundario);
-    color: var(--color-secundario);
+    border: 2px solid var(--azul-claro);
+    color: var(--azul-claro);
     font-size: 15px;
     padding: 10px 50px;
     border-radius: 7px;
