@@ -13,17 +13,82 @@
     --gris: #bfc6ff3d;
     --gris-claro: #bac0f1;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 70px;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgba(44, 43, 43, 0.164);
+}
+.logo-container{
+    display: flex;
+    gap: 15px;
+}
+.logo-container .logo{
+    width: 140px;
+}
+.logo-container .selector-lenguaje{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-container .selector-lenguaje .bandera{
+    width: 35px;
+}
+nav .links-container{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+nav .links-container .link-item{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+nav .links-container .link-item .link{
+    text-decoration: none;
+    color: var(--azul-oscuro);
+}
+
+nav .links-container .link-item .btn-link{
+    border: 2px solid var(--azul-oscuro);
+    padding: 10px;
+    border-radius: 5px;
+}
+nav .btn-hamburger{
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: none;
+}
+@media screen and (max-width:1050px) {
+    nav .btn-hamburger{
+        display: flex;
+    }
+    nav .links-container{
+        display: none;
+    }
+    .logo-container .selector-lenguaje{
+        display: none;
+    }
+}
+
 .section{
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 .titulo{
-    font-size: 35px;
+    font-size: 2rem;
     color: var(--azul-oscuro);
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 100px 0 40px 0;
 }
 .card{
     border: 1px solid var(--gris-claro);
@@ -55,7 +120,7 @@
     flex-direction: column;
     justify-content: space-between; 
     color: var(--azul-oscuro);
-    font-size: 15px;  
+    font-size: 1rem;  
 }
 .card .texto-contenedor .link{
     color: var(--azul-claro);
@@ -82,7 +147,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 15px;
+    font-size: 1rem;
 }
 .card .nombre-contenedor .name{
     font-weight: 700;
@@ -91,14 +156,26 @@
 .boton-contenedor{
     display: flex;
     justify-content: center;
+    width: 100%;
     padding-top: 50px;
 }
 .boton-contenedor .boton{
     font-weight: 700;
     border: 2px solid var(--azul-claro);
     color: var(--azul-claro);
-    font-size: 15px;
+    font-size: 1.2rem;
     padding: 10px 50px;
     border-radius: 7px;
     background-color: white;
+}
+@media screen and (max-width:1050px){
+    .section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0  150px;
+    }
+    .card{
+        width: 100%;
+    }
+
 }
